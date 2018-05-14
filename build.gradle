@@ -22,11 +22,7 @@ allprojects {
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
-//apply plugin: 'war'
-//war {
-//    baseName = 'lingyun-oa'
-//    version =  '0.1.0'
-//}
+
 jar {
     baseName = 'lingyun-oa'
     version =  '0.1.0'
@@ -48,14 +44,10 @@ dependencies {
 
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools'
 
-
-
-
-// https://mvnrepository.com/artifact/org.springframework/spring-websocket
-    //compile group: 'org.springframework', name: 'spring-websocket', version: '5.0.2.RELEASE'
-
     compile("org.springframework.boot:spring-boot-starter-actuator")
+
     compile ("org.quartz-scheduler:quartz:2.3.0")
+
     testCompile("org.springframework.boot:spring-boot-starter-test")
 
 }

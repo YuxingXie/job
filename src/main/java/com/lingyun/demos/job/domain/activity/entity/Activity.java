@@ -1,10 +1,6 @@
 package com.lingyun.demos.job.domain.activity.entity;
 
-import com.lingyun.common.code.BoolCodeEnum;
-
 import java.util.Date;
-import java.util.List;
-import java.util.Set;
 
 
 

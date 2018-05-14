@@ -1,6 +1,5 @@
 package com.lingyun.demos.job.config;
 
-import com.lingyun.common.data.Constant;
 import com.lingyun.demos.job.job.ActivityJob;
 import com.lingyun.demos.job.websocket.MyWebSocket;
 import org.quartz.JobDetail;

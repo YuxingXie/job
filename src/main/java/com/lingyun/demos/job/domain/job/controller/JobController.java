@@ -9,8 +9,8 @@ import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.*;
 import java.util.Calendar;
+import java.util.*;
 
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
@@ -54,7 +54,7 @@ public class JobController {
 
     /**
      * 新增一个活动加入计划任务(修改活动类似)
-     * 让活动在开始5分钟之前发出预告
+     * 让活动在开始2分钟之前发出预告
      * @return
      */
     @RequestMapping("/job/add/activity")
@@ -102,7 +102,6 @@ public class JobController {
                     .endAt(commonActivity.getEndDate())
                     .withSchedule(simpleSchedule().withRepeatCount(1).withIntervalInSeconds(Integer.parseInt(""+(activityRunningSeconds+1000*60*2))))
                     .build();
-
 
             Map<JobDetail,Set<? extends Trigger>> jobDetailMap=new HashMap<>();
             Set<Trigger> triggerSet=new HashSet<>();
